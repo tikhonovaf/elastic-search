@@ -1,0 +1,28 @@
+spring:
+  #  datasource:
+  #    url: jdbc:postgresql://localhost:5432/addressdb
+  #    username: ${POSTGRES_USER}
+  #    password: ${POSTGRES_PASSWORD}
+  #  jpa:
+  #    hibernate:
+  #      ddl-auto: create
+
+  datasource:
+    password: ${DATABASE_PASSWORD:ADMIN}
+    url: ${DATABASE_URL:jdbc:postgresql://127.0.0.1:5432/deep2000}
+    username: ${DATABASE_USER:ADMIN}
+  jpa:
+    hibernate:
+      jdbc:
+        batch_versioned_data: true
+    properties:
+      hibernate:
+        format_sql: true
+        jdbc:
+          batch_size: 20
+        order_inserts: true
+        order_updates: true
+
+  elasticsearch:
+    uris: http://localhost:9200
+
