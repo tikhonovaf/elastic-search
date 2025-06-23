@@ -18,7 +18,7 @@ import static org.assertj.core.api.Assertions.assertThat;
         "spring.elasticsearch.uris=http://localhost:9200"
 })
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
-class AddressServiceIntegrationTest {
+class AddressServiceIntegrationTestIT {
 
     @Autowired
     private AddressService addressService;
